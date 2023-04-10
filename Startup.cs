@@ -1,4 +1,5 @@
 using INTEXII.Data;
+using INTEXII.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,9 +37,8 @@ namespace INTEXII
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
 
-            //NEED THIS TO ACCESS DATABASE
-            //services.AddDbContext<MyDbContext>(options => 
-                //options.UseNpgsql(Configuration.GetConnectionString("MyConnection")));
+            services.AddDbContext<fagelgamous_databaseContext>(options => 
+                options.UseNpgsql(Configuration.GetConnectionString("MyConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
