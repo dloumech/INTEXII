@@ -37,7 +37,7 @@ namespace INTEXII
             services.AddControllersWithViews();
 
             //NEED THIS TO ACCESS DATABASE
-            //services.AddDbContext<MyDbContext>(options =>
+            //services.AddDbContext<MyDbContext>(options => 
                 //options.UseNpgsql(Configuration.GetConnectionString("MyConnection")));
         }
 
