@@ -6,6 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\Admin\**" />
+    <Compile Remove="Views\Home\Analysis\**" />
+    <Compile Remove="Views\Home\Burial\**" />
+    <Content Remove="Views\Home\Admin\**" />
+    <Content Remove="Views\Home\Analysis\**" />
+    <Content Remove="Views\Home\Burial\**" />
+    <EmbeddedResource Remove="Views\Home\Admin\**" />
+    <EmbeddedResource Remove="Views\Home\Analysis\**" />
+    <EmbeddedResource Remove="Views\Home\Burial\**" />
+    <None Remove="Views\Home\Admin\**" />
+    <None Remove="Views\Home\Analysis\**" />
+    <None Remove="Views\Home\Burial\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\SAnalysis.cshtml" />
   </ItemGroup>
 
@@ -26,12 +41,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Home\Admin\" />
-    <Folder Include="Views\Home\Burial\" />
-    <Folder Include="Views\Home\Analysis\" />
   </ItemGroup>
 
   <ItemGroup>
