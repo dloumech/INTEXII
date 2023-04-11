@@ -13,14 +13,20 @@ namespace INTEXII.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private fagelgamous_databaseContext _context { get; set; }
+        public HomeController(ILogger<HomeController> logger, fagelgamous_databaseContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var burials = _context.Burialmains
+                .Take(10)
+                .ToList();
+
+            return View(burials);
         }
 
         public IActionResult Privacy()

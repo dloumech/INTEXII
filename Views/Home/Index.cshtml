@@ -1,23 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
+
+@model List<Burialmain>
 <!-- Need a landing page, description of the project, link to burial information-->
 <div class="text-center">
     <h1 class="display-4">Whose Your Mummy?</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            One
-        </div>
-        <div class="col">
-            Two
-        </div>
-        <div class="col">
-            Three
+<div class="container border">
+    <div class="row border">
+        <div class="col font-weight-bold text-center">
+            READ
         </div>
     </div>
+    <div class="row border">
+        <div class="col border font-weight-bold text-center">
+            Northsouth
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Sex
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Depth
+        </div>
+    </div>
+    @foreach (var x in Model)
+    {
+        <div class="row border">
+            <div class="col border">
+                @x.Northsouth
+            </div>
+            <div class="col border">
+                @x.Sex
+            </div>
+            <div class="col border">
+                @x.Depth
+            </div>
+        </div>
+    }
 </div>
 
