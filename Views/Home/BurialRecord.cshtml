@@ -2,7 +2,7 @@
     ViewData["Title"] = "Burial Record";
 }
 
-@model List<Burialmain>
+@model List<BurialmainTextile>
 
 <div class="container border">
     <div class="row border">
@@ -12,27 +12,78 @@
     </div>
     <div class="row border">
         <div class="col border font-weight-bold text-center">
-            Northsouth
+        </div>
+        <div class="col border font-weight-bold text-center">
+            BurialID
         </div>
         <div class="col border font-weight-bold text-center">
             Sex
         </div>
         <div class="col border font-weight-bold text-center">
+            Age of Death
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Estimated Stature
+        </div>
+        <div class="col border font-weight-bold text-center">
             Depth
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Head Direction
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Textile Function
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Textile Structure
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Textile Color
+        </div>
+        <div class="col border font-weight-bold text-center">
+            Hair Color
+        </div>
+        <div class="col border font-weight-bold text-center">
         </div>
     </div>
     @foreach (var x in Model)
     {
-        <div class="row border">
-            <div class="col border">
-                @x.Northsouth
-            </div>
-            <div class="col border">
-                @x.Sex
-            </div>
-            <div class="col border">
-                @x.Depth
-            </div>
-        </div>
+<div class="row border">
+    <div class="col border">
+    </div>
+    <div class="col border">
+        @x.Burialmain.Burialid
+    </div>
+    <div class="col border">
+        @x.Burialmain.Sex
+    </div>
+    <div class="col border">
+        @x.Burialmain.Ageatdeath
+    </div>
+    <div class="col border">
+        @x.Burialmain.Length
+    </div>
+    <div class="col border">
+        @x.Burialmain.Depth
+    </div>
+    <div class="col border">
+        @x.Burialmain.Headdirection
+    </div>
+    <div class="col border">
+        @x.Textile.TextilefunctionTextile.FirstOrDefault()?.TextileFunction?.Textilefunction
+    </div>
+    <div class="col border">
+        @x.Textile.StructureTextile.FirstOrDefault()?.Structure?.TextileStructure
+    </div>
+    <div class="col border">
+        @x.Textile.ColorTextile.FirstOrDefault()?.TextileColor
+    </div>
+    <div class="col border">
+        @x.Burialmain.Haircolor
+    </div>
+    <div class="col border">
+    </div>
+</div>
+    }
     }
 </div>
