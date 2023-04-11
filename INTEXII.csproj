@@ -28,4 +28,10 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Home\Admin\" />
+    <Folder Include="Views\Home\Burial\" />
+    <Folder Include="Views\Home\Analysis\" />
+  </ItemGroup>
+
 </Project>
