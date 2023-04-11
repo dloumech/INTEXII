@@ -34,4 +34,13 @@
     <Folder Include="Views\Home\Analysis\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="IdentityManagerUI.csproj" />
+    <None Include="IdentityManagerUI.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Downloads\IdentityManagerUI-master\IdentityManagerUI-master\IdentityManagerUI\IdentityManagerUI.csproj" />
+  </ItemGroup>
+
 </Project>
