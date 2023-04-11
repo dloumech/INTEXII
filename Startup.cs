@@ -1,4 +1,3 @@
-using IdentityManagerUI.Models;
 using INTEXII.Data;
 using INTEXII.Models;
 using Microsoft.AspNetCore.Builder;
@@ -74,12 +73,6 @@ namespace INTEXII
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-                app.UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllerRoute(
-                        name: "IdentityManager",
-                        pattern: "{area}/{controller=Home}/{action=Index}/{id?}");
-                });
             });
         }
     }

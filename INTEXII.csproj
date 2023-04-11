@@ -39,8 +39,4 @@
     <None Include="IdentityManagerUI.sln" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Downloads\IdentityManagerUI-master\IdentityManagerUI-master\IdentityManagerUI\IdentityManagerUI.csproj" />
-  </ItemGroup>
-
 </Project>
