@@ -1,0 +1,20 @@
+﻿body {
+}
+
+/*ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    li {
+    margin: 0 10px;
+    list-style: none;
+}*/
+
+.padding{
+    padding-left: 175px;
+    padding-right: 175px;
+}
+
