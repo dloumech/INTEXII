@@ -22,11 +22,7 @@ namespace INTEXII.Controllers
 
         public IActionResult Index()
         {
-            var burials = _context.Burialmains
-                .Take(10)
-                .ToList();
-
-            return View(burials);
+            return View();
         }
 
         public IActionResult Privacy()
@@ -38,6 +34,15 @@ namespace INTEXII.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult BurialRecord ()
+        {
+            var burials = _context.Burialmains
+                .Take(10)
+                .ToList();
+
+            return View(burials);
         }
     }
 }
