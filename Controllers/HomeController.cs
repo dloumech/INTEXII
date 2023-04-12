@@ -62,5 +62,7 @@ namespace INTEXII.Controllers
 
             return View(burials);
         }
+
+
     }
 }

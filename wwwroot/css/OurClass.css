@@ -1,4 +1,36 @@
-﻿.body-new {
+﻿nav {
+    background-color: rgb(76,17,3);
+    height: 60px;
+    text-align:center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color:antiquewhite;
+    text-decoration: none;
+    padding: 15px;
+}
+a:hover{
+    color:antiquewhite;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+header nav ul li a{
+    color: antiquewhite;
+}
+.body-new {
     background-color: antiquewhite;
 }
 
@@ -84,7 +116,7 @@
     background-color:antiquewhite;
 }
 
-.header-color{
+a.navlink{
     color:antiquewhite;
 }
 

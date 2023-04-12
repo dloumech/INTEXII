@@ -1,40 +1,129 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using INTEXII.Data;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Owin.Security;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace Identity.Controllers
+namespace INTEXII.Controllers
 {
-    public class RoleController : Controller
-    {
-        private RoleManager<IdentityRole> roleManager;
-        public RoleController(RoleManager<IdentityRole> roleMgr)
-        {
-            roleManager = roleMgr;
-        }
+    //public class AdminController : Controller
+    //{
+    //    private readonly ApplicationDbContext _context;
+    //    private readonly IAuthenticationService _authenticationService;
+    //    private readonly IAuthenticationService _authService;
 
-        public ViewResult Index() => View(roleManager.Roles);
+    //    public AdminController(ApplicationDbContext context, IAuthenticationService authenticationService)
+    //    {
+    //        _context = context;
+    //        _authenticationService = authenticationService;
+    //    }
 
-        private void Errors(IdentityResult result)
-        {
-            foreach (IdentityError error in result.Errors)
-                ModelState.AddModelError("", error.Description);
-        }
+    //    [Authorize(Roles = "admin")]
+    //    public async Task<ActionResult> AdminPage()
+    //    {
+    //        var userName = User.Identity.Name;
+    //        var user = _context.Users.FirstOrDefault(u => u.UserName == userName);
 
-        public IActionResult Create() => View();
+    //        var isAdmin = await _context.Roles
+    //            .Where(r => r.Name == "admin")
+    //            .Join(_context.UserRoles, r => r.Id, ur => ur.RoleId, (r, ur) => ur.UserId)
+    //            .ContainsAsync(user.Id);
 
-        [HttpPost]
-        public async Task<IActionResult> Create([Required] string name)
-        {
-            if (ModelState.IsValid)
-            {
-                IdentityResult result = await roleManager.CreateAsync(new IdentityRole(name));
-                if (result.Succeeded)
-                    return RedirectToAction("Index");
-                else
-                    Errors(result);
-            }
-            return View(name);
-        }
-    }
+    //        if (isAdmin)
+    //        {
+    //            var identity = (ClaimsIdentity)User.Identity;
+    //            identity.AddClaim(new Claim(ClaimTypes.Role, "admin"));
+    //            object p = await _authenticationService.SignInAsync(HttpContext,
+    //                new ClaimsPrincipal(identity),
+    //                new Microsoft.AspNetCore.Authentication.AuthenticationProperties { IsPersistent = false });
+
+    //            return View();
+    //        }
+    //        else
+    //        {
+    //            return RedirectToAction("Index", "Home");
+    //        }
+    //    }
+    //}
+
+
+    //    public class AdminController : Controller
+    //    {
+    //        private readonly ApplicationDbContext _context;
+
+    //        public AdminController(ApplicationDbContext context)
+    //        {
+    //            _context = context;
+    //        }
+
+    //        [Authorize(Roles = "admin")]
+    //        public ActionResult AdminUser()
+    //        {
+    //            var userName = User.Identity.Name;
+    //            var user = _context.Users.FirstOrDefault(u => u.UserName == userName);
+
+    //            if (user != null)
+    //            {
+    //                // Retrieve the user's roles from the database
+    //                var roles = _context.Roles
+    //                    .Where(r => r.Users.Any(ur => ur.UserId == user.Id))
+    //                    .ToList();
+
+    //                // Check if the user has the "admin" role
+    //                if (roles.Any(r => r.Name == "admin"))
+    //                {
+    //                    var identity = (ClaimsIdentity)User.Identity;
+    //                    identity.AddClaim(new Claim(ClaimTypes.Role, "admin"));
+    //                    var authManager = HttpContext.GetOwinContext().Authentication;
+    //                    authManager.AuthenticationResponseGrant =
+    //                        new AuthenticationResponseGrant(new ClaimsPrincipal(identity),
+    //                            new AuthenticationProperties { IsPersistent = false });
+
+    //                    return View();
+    //                }
+    //            }
+
+    //            return RedirectToAction("Index", "Home");
+    //        }
+
+    //        public class AdminController : Controller
+    //{
+    //    private readonly ApplicationDbContext _context;
+
+    //    public AdminController(ApplicationDbContext context)
+    //    {
+    //        _context = context;
+    //    }
+
+    //    [Authorize(Roles = "admin")]
+    //    public ActionResult AdminPage()
+    //    {
+    //        var userName = User.Identity.Name;
+    //        var user = _context.Users.FirstOrDefault(u => u.UserName == userName);
+
+    //        if (user != null && user.Role == "admin")
+    //        {
+    //            var identity = (ClaimsIdentity)User.Identity;
+    //            identity.AddClaim(new Claim(ClaimTypes.Role, "admin"));
+    //            HttpContext.Authentication.SignInAsync(
+    //                new ClaimsPrincipal(identity),
+    //                new AuthenticationProperties { IsPersistent = false });
+
+    //            return View();
+    //        }
+    //        else
+    //        {
+    //            return RedirectToAction("Index", "Home");
+    //        }
+    //    }
+    //}
+
 }
+
+
