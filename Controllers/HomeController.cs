@@ -44,5 +44,14 @@ namespace INTEXII.Controllers
 
             return View(burials);
         }
+
+        [HttpGet]
+        public IActionResult AddRecord()
+        {
+            var burials = _context.Burialmains
+                .ToList();
+
+            return View(burials);
+        }
     }
 }
