@@ -12,10 +12,10 @@
     </div>
     <div class="row border">
         <div class="col border font-weight-bold text-center">
-            Square North South
+            BurialID
         </div>
         <div class="col border font-weight-bold text-center">
-            BurialID
+            Burial Number
         </div>
         <div class="col border font-weight-bold text-center">
             Sex
@@ -30,10 +30,13 @@
             Depth
         </div>
         <div class="col border font-weight-bold text-center">
+            Hair Color
+        </div>
+        <div class="col border font-weight-bold text-center">
             Head Direction
         </div>
         <div class="col border font-weight-bold text-center">
-            Hair Color
+            Square North South
         </div>
         <div class="col border font-weight-bold text-center">
             North South
@@ -47,18 +50,15 @@
         <div class="col border font-weight-bold text-center">
             Area
         </div>
-        <div class="col border font-weight-bold text-center">
-            Burial Number
-        </div>
     </div>
     @foreach (var x in Model)
     {
 <div class="row border">
     <div class="col border">
-        @x.Squarenorthsouth
+        @x.Burialid
     </div>
     <div class="col border">
-        @x.Burialid
+        @x.Burialnumber
     </div>
     <div class="col border">
         @x.Sex
@@ -73,10 +73,13 @@
         @x.Depth
     </div>
     <div class="col border">
+        @x.Haircolor
+    </div>
+    <div class="col border">
         @x.Headdirection
     </div>
     <div class="col border">
-        @x.Haircolor
+        @x.Squarenorthsouth
     </div>
     <div class="col border">
         @x.Northsouth
@@ -89,9 +92,6 @@
     </div>
     <div class="col border">
         @x.Area
-    </div>
-    <div class="col border">
-        @x.Burialnumber
     </div>
 </div>
     }
