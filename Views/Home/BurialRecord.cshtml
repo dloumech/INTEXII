@@ -50,6 +50,8 @@
         <div class="col border font-weight-bold text-center">
             Area
         </div>
+        <div class="col border font-weight-bold text-center">
+        </div>
     </div>
     @foreach (var x in Model)
     {
@@ -92,6 +94,9 @@
     </div>
     <div class="col border">
         @x.Area
+    </div>
+    <div class="col border">
+        <a asp-controller="Home" asp-action="Summary" asp-route-burialid="@x.Id">View Record</a>
     </div>
 </div>
     }

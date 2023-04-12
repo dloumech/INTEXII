@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -7,6 +8,7 @@ namespace INTEXII.Models
 {
     public partial class Burialmain
     {
+        [Key]
         public long Id { get; set; }
         public string Squarenorthsouth { get; set; }
         public string Headdirection { get; set; }

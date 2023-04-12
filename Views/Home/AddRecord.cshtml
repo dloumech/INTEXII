@@ -1,53 +1,80 @@
-﻿@*@{
+﻿@{
     ViewData["Title"] = "Addr a Record";
 }
 <h1>@ViewData["Title"]</h1>
 
-@model List<Burialmain>
+@model INTEXII.Models.Burialmain
 
 <div style="padding-left:50px">
     <form method="post">
 
         <div asp-validation-summary="All"></div>
 
-        <label asp-for="CategoryId">Category: </label>
-        <select asp-for="CategoryId">
-            <option value="">Select a Category</option>
-            @foreach (Category c in ViewBag.Categories)
-            {
-                <option value="@c.CategoryId">@c.CategoryName</option>
-            }
-        </select> <br />
+        <label asp-for="Burialid">Burial ID: </label>
+        <input asp-for="Burialid" /><br />
 
-        <label asp-for="Title">Title: </label>
-        <input asp-for="Title" /><br />
 
-        <label asp-for="Year">Year: </label>
-        <input asp-for="Year" /><br />
+        <label asp-for="Burialnumber">Burial Number: </label>
+        <input asp-for="Burialnumber" /><br />
 
-        <label asp-for="Director">Director: </label>
-        <input asp-for="Director" /><br />
-
-        <label asp-for="Rating">Rating: </label>
-        <select asp-for="Rating">
-            <option value="G">G</option>
-            <option value="PG">PG</option>
-            <option value="PG-13">PG-13</option>
-            <option value="R">R</option>
+        <label asp-for="Sex">Sex: </label>
+        <select asp-for="Sex">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="U">Unknown</option>
         </select><br />
 
-        <label asp-for="Edited">Edited: </label>
-        <select asp-for="Edited">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
+        <label asp-for="Ageatdeath">Age of Death: </label>
+        <select asp-for="Ageatdeath">
+            <option value="A">Adult</option>
+            <option value="C">Child</option>
+            <option value="I">Infant</option>
+            <option value="N">Newborn</option>
+            <option value="U">Unknown</option>
         </select><br />
 
-        <label asp-for="Lent">Lent to: </label>
-        <input asp-for="Lent" /><br />
+        <label asp-for="Length">Estimated Stature: </label>
+        <input asp-for="Length" /><br />
 
-        <label asp-for="Notes">Notes: </label>
-        <input asp-for="Notes" /><br />
+        <label asp-for="Depth">Depth: </label>
+        <input asp-for="Depth" /><br />
 
-        <button type="submit">Submit Movie</button>
+        <label asp-for="Haircolor">Hair Color: </label>
+        <select asp-for="Haircolor">
+            <option value="B">Brown/Dark Brown/Lt Brown</option>
+            <option value="K">Black</option>
+            <option value="A">Brown-Red</option>
+            <option value="R">Red/Red-Bl</option>
+            <option value="D">Blonde</option>
+            <option value="U">Unknown</option>
+        </select><br />
+
+        <label asp-for="Headdirection">Head Direction: </label>
+        <select asp-for="Headdirection">
+            <option value="N">North</option>
+            <option value="S">South</option>
+            <option value="E">East</option>
+            <option value="W">West</option>
+        </select><br />
+
+        <label asp-for="Squarenorthsouth">Square North South: </label>
+        <input asp-for="Squarenorthsouth" /><br />
+
+        <label asp-for="Northsouth">North South: </label>
+        <select asp-for="Northsouth">
+            <option value="N">North</option>
+            <option value="S">South</option>
+        </select><br />
+
+        <label asp-for="Squareeastwest">Square East West: </label>
+        <input asp-for="Squareeastwest" /><br />
+
+        <label asp-for="Eastwest">East West: </label>
+        <select asp-for="Eastwest">
+            <option value="E">East</option>
+            <option value="W">West</option>
+        </select><br />
+
+        <button type="submit">Submit Record</button>
     </form>
-</div>*@
+</div>

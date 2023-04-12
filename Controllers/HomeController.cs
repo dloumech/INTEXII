@@ -48,10 +48,46 @@ namespace INTEXII.Controllers
         [HttpGet]
         public IActionResult AddRecord()
         {
-            var burials = _context.Burialmains
-                .ToList();
+            return View();
+        }
 
-            return View(burials);
+        [HttpPost]
+        public IActionResult AddRecord(Burialmain bm)
+        {
+            if (ModelState.IsValid)
+            {
+                // Generate a random key between 20000000000000000 and 99999999999999999
+                Random random = new Random();
+                long key = (long)(random.NextDouble() * (99999999999999999 - 20000000000000000) + 20000000000000000);
+
+                // Check if the key already exists in the database
+                while (_context.Burialmains.Any(b => b.Id == key))
+                {
+                    key = (long)(random.NextDouble() * (99999999999999999 - 20000000000000000) + 20000000000000000);
+                }
+
+                // Set the generated key for the new record
+                bm.Id = key;
+
+                // Add and save the new record
+                _context.Add(bm);
+                _context.SaveChanges();
+
+                return View("Confirmation");
+            }
+
+            else //invalid data
+            {
+                return View(bm);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Summary(int burialId)
+        {
+            var burial = _context.Burialmains.Single(x => x.Id == burialId);
+
+            return View(burial);
         }
     }
 }
