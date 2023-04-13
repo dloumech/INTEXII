@@ -6,6 +6,7 @@
 
 <h2>Confirm Deletion</h2>
 <h3>Are you sure you want to delete the record for @Model.Id?</h3>
+<p>Burial ID: @Model.Burialid. Burial Num: @Model.Burialnumber </p>
 
 <form method="post" asp-controller="Home" asp-action="Delete">
     <button type="submit">Delete</button>
