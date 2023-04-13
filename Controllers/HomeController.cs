@@ -1,4 +1,5 @@
 ﻿using INTEXII.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -44,30 +45,11 @@ namespace INTEXII.Controllers
 
         public IActionResult BurialRecord()
         {
-            var burials = _context.BurialmainTextiles
-                .Include(bt => bt.Burialmain)
-                .Include(bt => bt.Textile)
-                .Join(_context.StructureTextiles,
-                    bt => bt.Textile.Id,
-                    st => st.MainTextileid,
-                    (bt, st) => new { BurialmainTextile = bt, StructureTextile = st })
-                .Join(_context.TextilefunctionTextiles,
-                    bts => bts.BurialmainTextile.Textile.Id,
-                    tft => tft.MainTextileid,
-                    (bts, tft) => new { BurialmainTextile = bts.BurialmainTextile, StructureTextile = bts.StructureTextile, TextilefunctionTextile = tft })
-                .Select(bts => new { bts.BurialmainTextile, bts.StructureTextile, bts.TextilefunctionTextile, bts.BurialmainTextile.Textile })
-                .Join(_context.ColorTextiles,
-                    bts => bts.Textile.Id,
-                    ct => ct.MainTextileid,
-                    (bts, ct) => new { BurialmainTextile = bts.BurialmainTextile, StructureTextile = bts.StructureTextile, TextilefunctionTextile = bts.TextilefunctionTextile, ColorTextile = ct })
-                .Include(x => x.StructureTextile.Structure)
-                .Take(10)
-                .Select(x => x.BurialmainTextile)
+            var burials = _context.Burialmains
                 .ToList();
 
             return View(burials);
         }
-
 
     }
 }

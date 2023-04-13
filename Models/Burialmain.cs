@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -7,6 +9,8 @@ namespace INTEXII.Models
 {
     public partial class Burialmain
     {
+        [Key]
+        [Column("id")]
         public long Id { get; set; }
         public string Squarenorthsouth { get; set; }
         public string Headdirection { get; set; }
@@ -27,6 +31,8 @@ namespace INTEXII.Models
         public string Westtohead { get; set; }
         public string Samplescollected { get; set; }
         public string Area { get; set; }
+
+        [Column("burialid")]
         public long? Burialid { get; set; }
         public string Length { get; set; }
         public string Burialnumber { get; set; }

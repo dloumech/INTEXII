@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Record Summary";
+}
+
+@model List<Burialmain>
+
+@foreach (var x in Model)
+{
+    <p>Burial ID: @x.Burialid</p>
+    <p>Burial Number: @x.Burialnumber</p>
+    <p>Sex: @x.Sex</p>
+    <p>Age at Death: @x.Ageatdeath</p>
+    <p>Length: @x.Length</p>
+    <p>Burial Depth: @x.Depth</p>
+    <p>Hair Color: @x.Haircolor</p>
+    <p>Head Direction: @x.Headdirection</p>
+    <p>Square North South: @x.Squarenorthsouth</p>
+    <p>North South: @x.Northsouth</p>
+    <p>Square East West: @x.Squareeastwest</p>
+    <p>East West: @x.Eastwest</p>
+    <p>Area: @x.Area</p>
+}
