@@ -85,7 +85,7 @@ namespace INTEXII.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Edit(long id)
         {
             var burial = _context.Burialmains.Single(x => x.Id == id);
 
@@ -110,7 +110,7 @@ namespace INTEXII.Controllers
         }
 
         [HttpGet]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(long id)
         {
             var burial = _context.Burialmains.Single(x => x.Id == id);
 
