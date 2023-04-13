@@ -30,6 +30,18 @@ a:hover{
 header nav ul li a{
     color: antiquewhite;
 }
+
+.logout{
+    text-align: center;
+    background-color: rgb(76,17,3);
+    color: antiquewhite;
+}
+
+.container-my{
+    display: flex;
+    justify-content: center;
+}
+
 .body-new {
     background-color: antiquewhite;
 }
