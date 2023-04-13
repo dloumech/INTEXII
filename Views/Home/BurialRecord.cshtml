@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Burial Record";
 }
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @model List<Burialmain>
 
@@ -55,51 +58,58 @@
     </div>
     @foreach (var x in Model)
     {
-        <div class="row border">
-            <div class="col border">
-                @x.Burialid
-            </div>
-            <div class="col border">
-                @x.Burialnumber
-            </div>
-            <div class="col border">
-                @x.Sex
-            </div>
-            <div class="col border">
-                @x.Ageatdeath
-            </div>
-            <div class="col border">
-                @x.Length
-            </div>
-            <div class="col border">
-                @x.Depth
-            </div>
-            <div class="col border">
-                @x.Haircolor
-            </div>
-            <div class="col border">
-                @x.Headdirection
-            </div>
-            <div class="col border">
-                @x.Squarenorthsouth
-            </div>
-            <div class="col border">
-                @x.Northsouth
-            </div>
-            <div class="col border">
-                @x.Squareeastwest
-            </div>
-            <div class="col border">
-                @x.Eastwest
-            </div>
-            <div class="col border">
-                @x.Area
-            </div>
-            <div class="col border">
-                <a asp-controller="Home" asp-action="Edit" asp-route-id="@x.Id">Edit Record</a>
-                <a asp-controller="Home" asp-action="Delete" asp-route-id="@x.Id">Delete Record</a>
-            </div>
+<div class="row border">
+    <div class="col border">
+        @x.Burialid
+    </div>
+    <div class="col border">
+        @x.Burialnumber
+    </div>
+    <div class="col border">
+        @x.Sex
+    </div>
+    <div class="col border">
+        @x.Ageatdeath
+    </div>
+    <div class="col border">
+        @x.Length
+    </div>
+    <div class="col border">
+        @x.Depth
+    </div>
+    <div class="col border">
+        @x.Haircolor
+    </div>
+    <div class="col border">
+        @x.Headdirection
+    </div>
+    <div class="col border">
+        @x.Squarenorthsouth
+    </div>
+    <div class="col border">
+        @x.Northsouth
+    </div>
+    <div class="col border">
+        @x.Squareeastwest
+    </div>
+    <div class="col border">
+        @x.Eastwest
+    </div>
+    <div class="col border">
+        @x.Area
+    </div>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="col border">
+            <a asp-controller="Home" asp-action="Edit" asp-route-id="@x.Id">Edit Record</a>
+            <a asp-controller="Home" asp-action="Delete" asp-route-id="@x.Id">Delete Record</a>
         </div>
+    }
+    else
+    {
+
+    }
+    </div>
     }
     }
 </div>
