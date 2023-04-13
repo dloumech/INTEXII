@@ -1,0 +1,22 @@
+
+{
+    "region" : "us-east-1",
+    "configuration" : "Debug",
+    "framework"     : "net5.0",
+    "self-contained" : false,
+    "application"    : "Please",
+    "environment"    : "Please-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-027bb9ed1e4b94283\";\"aws:ec2:vpc,Subnets\"=\"subnet-03718447b05849c28\";\"aws:ec2:vpc,ELBSubnets\"=\"subnet-03718447b05849c28,subnet-0acbc667d37412af7,subnet-084fd337b08eee5f6,subnet-0a1063ab047792571,subnet-0836f0fcf8231986a,subnet-0152c285b89899430\";\"aws:elasticbeanstalk:command,BatchType\"=\"Percentage\";\"aws:elasticbeanstalk:command,BatchSize\"=\"100\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.5.2 running .NET Core",
+    "environment-type"     : "LoadBalanced",
+    "loadbalancer-type"    : "application",
+    "cname"                : "please-dev",
+    "instance-type"        : "t2.small",
+    "key-pair"             : "fastapi",
+    "health-check-url"     : "/",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}
