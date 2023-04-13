@@ -1,4 +1,5 @@
 ﻿using INTEXII.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -46,6 +47,7 @@ namespace INTEXII.Controllers
         }
 
         [HttpGet]
+        //[Authorize]
         public IActionResult AddRecord()
         {
             return View();
@@ -83,11 +85,46 @@ namespace INTEXII.Controllers
         }
 
         [HttpGet]
-        public IActionResult Summary(int burialId)
+        public IActionResult Edit(int id)
         {
-            var burial = _context.Burialmains.Single(x => x.Id == burialId);
+            var burial = _context.Burialmains.Single(x => x.Id == id);
+
+            return View("AddRecord", burial);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Burialmain bm)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Update(bm);
+                _context.SaveChanges();
+
+                return RedirectToAction("BurialRecord");
+            }
+
+            else //invalid data
+            {
+                return View("AddRecord", bm);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var burial = _context.Burialmains.Single(x => x.Id == id);
 
             return View(burial);
         }
+
+        [HttpPost]
+        public IActionResult Delete(Burialmain bm)
+        {
+            _context.Burialmains.Remove(bm);
+            _context.SaveChanges();
+
+            return RedirectToAction("BurialRecord");
+        }
+
     }
 }

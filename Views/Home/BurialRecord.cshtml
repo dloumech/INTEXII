@@ -96,7 +96,8 @@
         @x.Area
     </div>
     <div class="col border">
-        <a asp-controller="Home" asp-action="Summary" asp-route-burialid="@x.Id">View Record</a>
+        <a asp-controller="Home" asp-action="Edit" asp-route-id="@x.Id">Edit Record</a>
+        <a asp-controller="Home" asp-action="Delete" asp-route-id="@x.Id">Delete Record</a>
     </div>
 </div>
     }
