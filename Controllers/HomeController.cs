@@ -15,6 +15,8 @@ namespace INTEXII.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        
+
         private fagelgamous_databaseContext _context { get; set; }
         public HomeController(ILogger<HomeController> logger, fagelgamous_databaseContext context)
         {
@@ -39,13 +41,33 @@ namespace INTEXII.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult BurialRecord()
+        public IActionResult BurialRecord( int pageNum = 1)
         {
+
+
+            int pageSize = 50; // number of records per page
+
+            // calculate the number of records to skip based on the current page number and page size
+            int skip = (pageNum - 1) * pageSize;
+
+            // retrieve a subset of the data from the database using Skip() and Take() methods
             var burials = _context.Burialmains
+                .Skip(skip)
+                .Take(pageSize)
                 .ToList();
 
+            // calculate the total number of pages based on the total number of records and page size
+            int totalPages = (int)Math.Ceiling(_context.Burialmains.Count() / (double)pageSize);
+
+            // pass the subset of data and pagination information to the view
+            ViewBag.CurrentPage = pageNum;
+            ViewBag.TotalPages = totalPages;
+
             return View(burials);
+
+
         }
+
 
         [HttpGet]
         //[Authorize]
