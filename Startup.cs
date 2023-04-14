@@ -29,11 +29,6 @@ namespace INTEXII
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(
-            //        Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDatabaseDeveloperPageExceptionFilter();
-
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -47,9 +42,13 @@ namespace INTEXII
             services.AddSingleton<InferenceSession>(
                new InferenceSession("wwwroot/decisiontreemod.onnx"));
 
-            //services.AddDefaultIdentity<ApplicationUser>()
-            //    .AddRoles<ApplicationRole>()
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddHsts(options =>
+            {
+                options.MaxAge = TimeSpan.FromDays(365);
+                options.IncludeSubDomains = true;
+                options.Preload = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +67,8 @@ namespace INTEXII
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseHsts();
 
             app.UseRouting();
 
