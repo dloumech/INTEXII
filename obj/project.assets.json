@@ -9799,11 +9799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
+      "projectUniqueName": "C:\\Users\\irvin\\source\\repos\\INTEXII\\INTEXII.csproj",
       "projectName": "INTEXII",
-      "projectPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
+      "projectPath": "C:\\Users\\irvin\\source\\repos\\INTEXII\\INTEXII.csproj",
       "packagesPath": "C:\\Users\\irvin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\obj\\",
+      "outputPath": "C:\\Users\\irvin\\source\\repos\\INTEXII\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\irvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
