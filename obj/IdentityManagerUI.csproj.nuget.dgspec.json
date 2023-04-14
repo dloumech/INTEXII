@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\irvin\\source\\repos\\INTEXII\\IdentityManagerUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\irvin\\source\\repos\\INTEXII\\IdentityManagerUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\irvin\\source\\repos\\INTEXII\\IdentityManagerUI.csproj",
+        "projectName": "IdentityManagerUI",
+        "projectPath": "C:\\Users\\irvin\\source\\repos\\INTEXII\\IdentityManagerUI.csproj",
+        "packagesPath": "C:\\Users\\irvin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\irvin\\source\\repos\\INTEXII\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\irvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

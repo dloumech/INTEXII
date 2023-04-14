@@ -47,9 +47,4 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="IdentityManagerUI.csproj" />
-    <None Include="IdentityManagerUI.sln" />
-  </ItemGroup>
-
 </Project>
