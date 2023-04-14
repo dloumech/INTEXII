@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj": {}
+    "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj": {
+    "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj",
+        "projectUniqueName": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
         "projectName": "INTEXII",
-        "projectPath": "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj",
-        "packagesPath": "C:\\Users\\katie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\obj\\",
+        "projectPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
+        "packagesPath": "C:\\Users\\irvin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\katie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\irvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,6 +73,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.ML.OnnxRuntime": {
+              "target": "Package",
+              "version": "[1.14.1, )"
             },
             "Microsoft.Owin": {
               "target": "Package",
