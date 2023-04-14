@@ -34,6 +34,15 @@ namespace INTEXII
             //        Configuration.GetConnectionString("DefaultConnection")));
             //services.AddDatabaseDeveloperPageExceptionFilter();
 
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential 
+                // cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                // requires using Microsoft.AspNetCore.Http;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -44,14 +53,6 @@ namespace INTEXII
             services.AddDbContext<fagelgamous_databaseContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("MyConnection")));
 
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential 
-                // cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                // requires using Microsoft.AspNetCore.Http;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
 
 
             //services.AddDefaultIdentity<ApplicationUser>()

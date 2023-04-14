@@ -10,7 +10,6 @@
 </head>
 <body>
     <header>
-        <div class="container"><partial name="_CookieConsentPartial" /></div>
         <nav>
             <ul>
                 <li>
@@ -26,7 +25,9 @@
             <partial name="_LoginPartial" />
         </nav>
     </header>
-    <div class=""><!--took out container-->
+    <div class="">
+        <!--took out container-->
+        <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3 body-new">
             @RenderBody()
         </main>

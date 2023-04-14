@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj": {}
+    "C:\\Users\\darbymecham\\source\\repos\\INTEXII\\INTEXII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj": {
+    "C:\\Users\\darbymecham\\source\\repos\\INTEXII\\INTEXII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
+        "projectUniqueName": "C:\\Users\\darbymecham\\source\\repos\\INTEXII\\INTEXII.csproj",
         "projectName": "INTEXII",
-        "projectPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
-        "packagesPath": "C:\\Users\\irvin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\obj\\",
+        "projectPath": "C:\\Users\\darbymecham\\source\\repos\\INTEXII\\INTEXII.csproj",
+        "packagesPath": "C:\\Users\\darbymecham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\darbymecham\\source\\repos\\INTEXII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\irvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\darbymecham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,17 +101,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -120,12 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }
