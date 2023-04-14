@@ -6,14 +6,11 @@
     var cookieString = consentFeature?.CreateConsentCookie();
 }
 
-@*Partial view to show user to allow them to accept cookies. There is no option to not accept, we just wanted to give them the choice, which is compliant to GDPR
-    Partial view will go away once user agrees to acccept cookies*@
-
 @if (showBanner)
 {
     <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
-        Use this space to summarize your privacy and cookie use policy. <a asp-page="/Privacy">Learn More</a>.
-        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
+        This Cookie Policy explains how we use cookies an similar technologies to recognize you
+        when you visit our website. Please click to accept.<button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
             <span aria-hidden="true">Accept</span>
         </button>
     </div>

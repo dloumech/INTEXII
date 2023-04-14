@@ -154,7 +154,6 @@ C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\Admin.cshtml.g.cs
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\AdminUser.cshtml.g.cs
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\BurialRecord.cshtml.g.cs
-C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\BurialSummary.cshtml.g.cs
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\Confirmation.cshtml.g.cs
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\Delete.cshtml.g.cs
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\Index.cshtml.g.cs
@@ -522,3 +521,15 @@ C:\Users\irvin\Source\Repos\INTEXII\bin\Release\net5.0\win-x64\mscordbi.dll
 C:\Users\irvin\Source\Repos\INTEXII\bin\Release\net5.0\win-x64\mscorrc.dll
 C:\Users\irvin\Source\Repos\INTEXII\bin\Release\net5.0\win-x64\ucrtbase.dll
 C:\Users\irvin\Source\Repos\INTEXII\bin\Release\net5.0\win-x64\aspnetcorev2_inprocess.dll
+C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\win-x64\onnxruntime.dll
+C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\win-x64\onnxruntime_providers_shared.dll
+C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\win-x64\Microsoft.ML.OnnxRuntime.dll
+C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\win-x64\onnxruntime.lib
+C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\win-x64\onnxruntime_providers_shared.lib
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Areas\IdentityManager\Views\Home\EnableAuthenticator.cshtml.g.cs
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Areas\IdentityManager\Views\Home\Roles.cshtml.g.cs
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Areas\IdentityManager\Views\Home\Users.cshtml.g.cs
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Areas\IdentityManager\Views\_ViewImports.cshtml.g.cs
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Areas\IdentityManager\Views\_ViewStart.cshtml.g.cs
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\RecordFilter.cshtml.g.cs
+C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\win-x64\Razor\Views\Home\_CookieConsentPartial.cshtml.g.cs
