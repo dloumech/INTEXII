@@ -5,6 +5,10 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
+@*This table is simple yet gorgeous. It prints off all the records in the database with pagination, the option to edit or delete a record, and basic information.
+    There is filtering on the left to specify your needs, and there is also role based access control to show no abilities to edit or delete for regular users, but
+    admin do have that access, granting a similar simple experience.*@
+
 @model List<Burialmain>
     <div class="sunshine fricknah">
         <a asp-area="" asp-controller="Home" asp-action="RecordFilter"> Filter</a>
@@ -103,6 +107,8 @@
             <div class="col border">
                 @x.Area
             </div>
+
+            @*Checks to see if the user is signed in and has privelages to edit and delete records*@
             @if (SignInManager.IsSignedIn(User))
             {
                 <div class="col border sunshine">

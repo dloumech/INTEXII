@@ -6,6 +6,9 @@
     var cookieString = consentFeature?.CreateConsentCookie();
 }
 
+@*Partial view to show user to allow them to accept cookies. There is no option to not accept, we just wanted to give them the choice, which is compliant to GDPR
+    Partial view will go away once user agrees to acccept cookies*@
+
 @if (showBanner)
 {
     <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">

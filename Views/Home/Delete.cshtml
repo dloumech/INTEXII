@@ -4,6 +4,8 @@
 
 @model Burialmain
 
+@*A confirmation page for deleting. This give the user a chance to go back if they don't want to delete. Will then route to Burial Records upon deletion*@
+
 <h2>Confirm Deletion</h2>
 <h3>Are you sure you want to delete the record for @Model.Id?</h3>
 <p>Burial ID: @Model.Burialid. Burial Num: @Model.Burialnumber </p>

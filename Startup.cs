@@ -50,9 +50,11 @@ namespace INTEXII
                 options.CheckConsentNeeded = context => true;
                 // requires using Microsoft.AspNetCore.Http;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+                //Lets the page go away once the cookies have been accepted.
                 options.ConsentCookie.SecurePolicy = CookieSecurePolicy.Always;
             });
 
+            //HSTS configurations. Maybe not necessary, but we just allowed Hsts max age to be one year, to include all sub domains and to pre load.
             services.AddHsts(options =>
             {
                 options.MaxAge = TimeSpan.FromDays(365);
@@ -76,6 +78,8 @@ namespace INTEXII
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            //Various "things" we are using around the project. Look for "UseRouting" or "UseHsts" to learn more
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

@@ -3,6 +3,8 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul>
+    @*Condition check to verify whether the user is signed in. If so, the display will be different. If they aren't, there will only be a
+        prompt to log in. If they are, their email will appear.'*@
     @if (SignInManager.IsSignedIn(User))
       {
     @*<li class="right">
