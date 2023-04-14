@@ -6,22 +6,22 @@
 @inject UserManager<IdentityUser> UserManager
 
 @model List<Burialmain>
-    <div>
+    <div class="sunshine fricknah">
         <a asp-area="" asp-controller="Home" asp-action="RecordFilter"> Filter</a>
     </div>
-    <div>
+    <div class="sunshine fricknah">
         <a asp-area="" asp-controller="Home" asp-action="ClearFilters"> Reset Filter</a>
     </div>
-<div class="container border">
-    <div class="row border">
-        <div class="col font-weight-bold text-center">
+<div class="container">
+    <div class="row ">
+        <div class="col font-weight-bold text-center shawty">
             Burial Records
         </div>
     </div>
     <div class="row border">
-        <div class="col border font-weight-bold text-center">
+        @*<div class="col border font-weight-bold text-center">
             BurialID
-        </div>
+        </div>*@
         <div class="col border font-weight-bold text-center">
             Burial Number
         </div>
@@ -64,9 +64,9 @@
     @foreach (var x in Model)
     {
         <div class="row border">
-            <div class="col border">
+            @*<div class="col border">
                 @x.Burialid
-            </div>
+            </div>*@
             <div class="col border">
                 @x.Burialnumber
             </div>
@@ -105,9 +105,9 @@
             </div>
             @if (SignInManager.IsSignedIn(User))
             {
-                <div class="col border">
-                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@x.Id">Edit Record</a>
-                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@x.Id">Delete Record</a>
+                <div class="col border sunshine">
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@x.Id">Edit</a>
+                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@x.Id">Delete</a>
                 </div>
             }
             else

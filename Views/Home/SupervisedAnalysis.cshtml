@@ -1,55 +1,57 @@
 ﻿@{
     ViewData["Title"] = "Supervised Analysis";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Supervised Analyis</h1>
-</div>
-<form>
-    <div class="row text-center" style="padding-top:50px">
-        <div class="col-7">
-            <h4>Fill out the form to predict how your mummy was most likely wrapped</h4>
-            <div class="form-group" style="color:white; margin-top:10px; margin-bottom:15px">
-                <label for="HeadDirection" class="myLabelSuper">Head Direction:</label>
-                <select id="HeadDirection" class="form-control myInput" name="HeadDirection">
-                    <option value="-">-</option>
-                    <option value="East">East</option>
-                    <option value="West">West</option>
-                </select>
-            </div>
-            <div class="form-group" style="color: white; margin-bottom: 15px">
-                <label for="AgeAtDeath" class="myLabelSuper">Age At Death:</label>
-                <select id="AgeAtDeath" class="form-control myInput" name="AgeAtDeath">
-                    <option value="-">-</option>
-                    <option value="A">Adult</option>
-                    <option value="C">Child</option>
-                    <option value="I">Infant</option>
-                    <option value="N">Newborn</option>
-                </select>
-            </div>
-            <div class="form-group" style="color: white; margin-bottom: 15px">
-                <label for="WrappingMaterial" class="myLabelSuper">Wrapping Material:</label>
-                <select id="WrappingMaterial" class="form-control myInput" name="WrappingMaterial">
-                    <option value="-">-</option>
-                    <option value="Linen">Linen</option>
-                    <option value="Linen Background">Linen Background</option>
-                    <option value="Linen Red">Linen Red</option>
-                    <option value="Linen VLS">Linen VLS</option>
-                    <option value="Wool">Wool</option>
-                    <option value="Wool - Tapestry">Wool - Tapestry</option>
-                    <option value="Wool - Thread">Wool - Thread</option>
-                    <option value="Other">Other</option>
-                    <option value="Other - Burlap">Other - Burlap</option>
-                    <option value="Other - Vegetable Fiber">Other - Vegetable Fiber</option>
-                </select>
-            </div>
-            <button id="custom-button">Predict Wrapping!</button>
-        </div>
+<div class="padding">
+    <div class="text-center" style="padding-top:50px">
+        <h1 class="display-4">Supervised Analyis</h1>
     </div>
-</form>
+    <form class="frickyeah">
+        <div class=" text-center" style="padding-top:50px">
+            <div class="">
+                <h4>Fill out the form to predict how your mummy was most likely wrapped</h4>
+                <div class="form-group" style="color:white; margin-top:10px; margin-bottom:15px">
+                    <label for="HeadDirection" class="myLabelSuper chickennuggies">Head Direction:</label>
+                    <select id="HeadDirection" class="form-control myInput" name="HeadDirection">
+                        <option value="-">-</option>
+                        <option value="East">East</option>
+                        <option value="West">West</option>
+                    </select>
+                </div>
+                <div class="form-group" style="color: white; margin-bottom: 15px">
+                    <label for="AgeAtDeath" class="myLabelSuper chickennuggies">Age At Death:</label>
+                    <select id="AgeAtDeath" class="form-control myInput" name="AgeAtDeath">
+                        <option value="-">-</option>
+                        <option value="A">Adult</option>
+                        <option value="C">Child</option>
+                        <option value="I">Infant</option>
+                        <option value="N">Newborn</option>
+                    </select>
+                </div>
+                <div class="form-group" style="color: white; margin-bottom: 15px">
+                    <label for="WrappingMaterial" class="myLabelSuper chickennuggies">Wrapping Material:</label>
+                    <select id="WrappingMaterial" class="form-control myInput" name="WrappingMaterial">
+                        <option value="-">-</option>
+                        <option value="Linen">Linen</option>
+                        <option value="Linen Background">Linen Background</option>
+                        <option value="Linen Red">Linen Red</option>
+                        <option value="Linen VLS">Linen VLS</option>
+                        <option value="Wool">Wool</option>
+                        <option value="Wool - Tapestry">Wool - Tapestry</option>
+                        <option value="Wool - Thread">Wool - Thread</option>
+                        <option value="Other">Other</option>
+                        <option value="Other - Burlap">Other - Burlap</option>
+                        <option value="Other - Vegetable Fiber">Other - Vegetable Fiber</option>
+                    </select>
+                </div>
+                <button id="custom-button">Predict Wrapping!</button>
+            </div>
+        </div>
+    </form>
 
-<h4>Prediction:</h4>
-<h4 id="predictionResult"></h4>
+    <h4>Prediction:</h4>
+    <h4 id="predictionResult"></h4>
+
+</div>
 
 <script>
     const customButton = document.getElementById('custom-button');
