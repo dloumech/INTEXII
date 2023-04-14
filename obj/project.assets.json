@@ -3363,7 +3363,7 @@
         }
       }
     },
-    "net5.0/linux-x64": {
+    "net5.0/win-x64": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -3894,13 +3894,17 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
+          "runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
             "related": ".pdb"
           }
         }
       },
       "Microsoft.Data.SqlClient.SNI.runtime/2.0.1": {
-        "type": "package"
+        "type": "package",
+        "native": {
+          "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {},
+          "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb": {}
+        }
       },
       "Microsoft.EntityFrameworkCore/5.0.17": {
         "type": "package",
@@ -4559,7 +4563,7 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
-          "runtime.unix.Microsoft.Win32.Primitives": "4.3.0"
+          "runtime.win.Microsoft.Win32.Primitives": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {
@@ -4579,7 +4583,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         }
@@ -4595,7 +4599,7 @@
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         }
@@ -4993,57 +4997,49 @@
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.unix.Microsoft.Win32.Primitives/4.3.0": {
+      "runtime.win.Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
           "System.Runtime": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "runtime.native.System": "4.3.0"
+          "System.Runtime.InteropServices": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+          "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "runtime.unix.System.Console/4.3.1": {
+      "runtime.win.System.Console/4.3.1": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem.Primitives": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "runtime.native.System": "4.3.0"
+          "System.Threading.Tasks": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Console.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Console.dll": {}
         }
       },
-      "runtime.unix.System.Diagnostics.Debug/4.3.0": {
+      "runtime.win.System.Diagnostics.Debug/4.3.0": {
         "type": "package",
-        "dependencies": {
-          "runtime.native.System": "4.3.0"
-        },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.Debug.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.Debug.dll": {}
         }
       },
-      "runtime.unix.System.IO.FileSystem/4.3.0": {
+      "runtime.win.System.IO.FileSystem/4.3.0": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.3.0",
@@ -5059,17 +5055,17 @@
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "runtime.native.System": "4.3.0"
+          "System.Threading.Overlapped": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.IO.FileSystem.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.dll": {}
         }
       },
-      "runtime.unix.System.Net.Primitives/4.3.0": {
+      "runtime.win.System.Net.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Primitives": "4.3.0",
@@ -5081,17 +5077,16 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.Handles": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
-          "System.Threading": "4.3.0",
-          "runtime.native.System": "4.3.0"
+          "System.Threading": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Net.Primitives.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Primitives.dll": {}
         }
       },
-      "runtime.unix.System.Net.Sockets/4.3.0": {
+      "runtime.win.System.Net.Sockets/4.3.0": {
         "type": "package",
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -5100,6 +5095,7 @@
           "System.Globalization": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
           "System.Net.Primitives": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
@@ -5107,42 +5103,28 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.Handles": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Principal.Windows": "4.3.0",
           "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "System.Threading.ThreadPool": "4.3.0",
-          "runtime.native.System": "4.3.0"
+          "System.Threading.Overlapped": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Net.Sockets.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Sockets.dll": {}
         }
       },
-      "runtime.unix.System.Private.Uri/4.3.0": {
+      "runtime.win.System.Runtime.Extensions/4.3.0": {
         "type": "package",
         "dependencies": {
-          "runtime.native.System": "4.3.0"
+          "System.Private.Uri": "4.3.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
-        }
-      },
-      "runtime.unix.System.Runtime.Extensions/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Private.Uri": "4.3.0",
-          "runtime.native.System": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard/_._": {}
-        },
-        "runtime": {
-          "runtimes/unix/lib/netstandard1.5/System.Runtime.Extensions.dll": {}
+          "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -5474,7 +5456,7 @@
           "System.IO": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
-          "runtime.unix.System.Console": "4.3.1"
+          "runtime.win.System.Console": "4.3.1"
         },
         "compile": {
           "ref/netstandard1.3/System.Console.dll": {
@@ -5488,7 +5470,7 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
-          "runtime.unix.System.Diagnostics.Debug": "4.3.0"
+          "runtime.win.System.Diagnostics.Debug": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.Debug.dll": {
@@ -5542,7 +5524,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
@@ -5571,7 +5553,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         }
@@ -5621,7 +5603,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Globalization.Extensions.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll": {}
         }
       },
       "System.IdentityModel.Tokens.Jwt/5.6.0": {
@@ -5683,7 +5665,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.IO.Compression.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.IO.Compression.dll": {}
         }
       },
       "System.IO.Compression.ZipFile/4.3.0": {
@@ -5719,7 +5701,7 @@
           "System.Runtime.Handles": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
-          "runtime.unix.System.IO.FileSystem": "4.3.0"
+          "runtime.win.System.IO.FileSystem": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/System.IO.FileSystem.dll": {
@@ -5834,7 +5816,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {}
         }
       },
       "System.Net.NameResolution/4.3.0": {
@@ -5861,7 +5843,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Net.NameResolution.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll": {}
         }
       },
       "System.Net.Primitives/4.3.0": {
@@ -5871,7 +5853,7 @@
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0",
-          "runtime.unix.System.Net.Primitives": "4.3.0"
+          "runtime.win.System.Net.Primitives": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Primitives.dll": {
@@ -5888,7 +5870,7 @@
           "System.Net.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
-          "runtime.unix.System.Net.Sockets": "4.3.0"
+          "runtime.win.System.Net.Sockets": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Sockets.dll": {
@@ -5954,8 +5936,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
-          "Microsoft.NETCore.Targets": "1.1.3",
-          "runtime.unix.System.Private.Uri": "4.3.0"
+          "Microsoft.NETCore.Targets": "1.1.3"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -6119,7 +6100,7 @@
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.Caching.dll": {
+          "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll": {
             "related": ".xml"
           }
         }
@@ -6143,7 +6124,7 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
-          "runtime.unix.System.Runtime.Extensions": "4.3.0"
+          "runtime.win.System.Runtime.Extensions": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.Extensions.dll": {
@@ -6195,7 +6176,7 @@
           "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+          "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -6274,7 +6255,7 @@
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
             "related": ".xml"
           }
         }
@@ -6301,7 +6282,7 @@
           "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
         }
       },
       "System.Security.Cryptography.Cng/4.5.0": {
@@ -6312,7 +6293,7 @@
           }
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
         }
       },
       "System.Security.Cryptography.Csp/4.3.0": {
@@ -6336,7 +6317,7 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {}
         }
       },
       "System.Security.Cryptography.Encoding/4.3.0": {
@@ -6361,7 +6342,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {}
         }
       },
       "System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -6385,7 +6366,7 @@
           "ref/netstandard1.6/_._": {}
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {}
+          "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {}
         }
       },
       "System.Security.Cryptography.Primitives/4.3.0": {
@@ -6414,7 +6395,7 @@
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         }
@@ -6454,7 +6435,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
         }
       },
       "System.Security.Permissions/4.7.0": {
@@ -6482,7 +6463,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
             "related": ".xml"
           }
         }
@@ -6505,7 +6486,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.3/System.Security.SecureString.dll": {}
+          "runtimes/win/lib/netstandard1.3/System.Security.SecureString.dll": {}
         }
       },
       "System.ServiceProcess.ServiceController/4.1.0": {
@@ -6526,7 +6507,7 @@
           }
         },
         "runtime": {
-          "runtimes/unix/lib/netstandard1.5/System.ServiceProcess.ServiceController.dll": {}
+          "runtimes/win/lib/netstandard1.5/System.ServiceProcess.ServiceController.dll": {}
         }
       },
       "System.Text.Encoding/4.3.0": {
@@ -6554,7 +6535,7 @@
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         }
@@ -6614,6 +6595,23 @@
           "lib/netstandard1.3/System.Threading.dll": {}
         }
       },
+      "System.Threading.Overlapped/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Threading.Overlapped.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard1.3/System.Threading.Overlapped.dll": {}
+        }
+      },
       "System.Threading.Tasks/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6635,21 +6633,6 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
-        }
-      },
-      "System.Threading.ThreadPool/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Handles": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Threading.ThreadPool.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
       "System.Threading.Timer/4.3.0": {
@@ -6677,7 +6660,7 @@
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
+          "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll": {
             "related": ".xml"
           }
         }
@@ -9426,124 +9409,130 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.unix.Microsoft.Win32.Primitives/4.3.0": {
-      "sha512": "2mI2Mfq+CVatgr4RWGvAWBjoCfUafy6VNFU7G9OA52DjO8x/okfIbsEq2UPgeGfdpO7X5gmPXKT8slx0tn0Mhw==",
+    "runtime.win.Microsoft.Win32.Primitives/4.3.0": {
+      "sha512": "NU51SEt/ZaD2MF48sJ17BIqx7rjeNNLXUevfMOjqQIetdndXwYjZfZsT6jD+rSWp/FYxjesdK4xUSl4OTEI0jw==",
       "type": "package",
-      "path": "runtime.unix.microsoft.win32.primitives/4.3.0",
+      "path": "runtime.win.microsoft.win32.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.microsoft.win32.primitives.4.3.0.nupkg.sha512",
-        "runtime.unix.microsoft.win32.primitives.nuspec",
-        "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Primitives.dll"
+        "runtime.win.microsoft.win32.primitives.4.3.0.nupkg.sha512",
+        "runtime.win.microsoft.win32.primitives.nuspec",
+        "runtimes/win/lib/net/_._",
+        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Primitives.dll"
       ]
     },
-    "runtime.unix.System.Console/4.3.1": {
-      "sha512": "MOmRf2JcN44Bs/EebFMgHBiCiTtFW6ZcpFds2uPlqoXN+8SSMJ43qb+/r1DQ36CUI9JUXBhnm+jdo19PWOzFTg==",
+    "runtime.win.System.Console/4.3.1": {
+      "sha512": "vHPXC3B18dxhyipVce8xQT1MQv1o5srYZqBlCNu9p9MNjhgGOntdQh/Xh2X4o7M2F839YUcQiGwu8Q498FyDjg==",
       "type": "package",
-      "path": "runtime.unix.system.console/4.3.1",
+      "path": "runtime.win.system.console/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.system.console.4.3.1.nupkg.sha512",
-        "runtime.unix.system.console.nuspec",
-        "runtimes/unix/lib/netstandard1.3/System.Console.dll"
+        "runtime.win.system.console.4.3.1.nupkg.sha512",
+        "runtime.win.system.console.nuspec",
+        "runtimes/win/lib/net/_._",
+        "runtimes/win/lib/netcore50/System.Console.dll",
+        "runtimes/win/lib/netstandard1.3/System.Console.dll"
       ]
     },
-    "runtime.unix.System.Diagnostics.Debug/4.3.0": {
-      "sha512": "WV8KLRHWVUVUDduFnvGMHt0FsEt2wK6xPl1EgDKlaMx2KnZ43A/O0GzP8wIuvAC7mq4T9V1mm90r+PXkL9FPdQ==",
+    "runtime.win.System.Diagnostics.Debug/4.3.0": {
+      "sha512": "hHHP0WCStene2jjeYcuDkETozUYF/3sHVRHAEOgS3L15hlip24ssqCTnJC28Z03Wpo078oMcJd0H4egD2aJI8g==",
       "type": "package",
-      "path": "runtime.unix.system.diagnostics.debug/4.3.0",
+      "path": "runtime.win.system.diagnostics.debug/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.system.diagnostics.debug.4.3.0.nupkg.sha512",
-        "runtime.unix.system.diagnostics.debug.nuspec",
-        "runtimes/unix/lib/netstandard1.3/System.Diagnostics.Debug.dll"
+        "runtime.win.system.diagnostics.debug.4.3.0.nupkg.sha512",
+        "runtime.win.system.diagnostics.debug.nuspec",
+        "runtimes/aot/lib/netcore50/System.Diagnostics.Debug.dll",
+        "runtimes/win/lib/net45/_._",
+        "runtimes/win/lib/netcore50/System.Diagnostics.Debug.dll",
+        "runtimes/win/lib/netstandard1.3/System.Diagnostics.Debug.dll",
+        "runtimes/win/lib/win8/_._",
+        "runtimes/win/lib/wp80/_._",
+        "runtimes/win/lib/wpa81/_._"
       ]
     },
-    "runtime.unix.System.IO.FileSystem/4.3.0": {
-      "sha512": "ajmTcjrqc3vgV1TH54DRioshbEniaFbOAJ0kReGuNsp9uIcqYle0RmUo6+Qlwqe3JIs4TDxgnqs3UzX3gRJ1rA==",
+    "runtime.win.System.IO.FileSystem/4.3.0": {
+      "sha512": "Z37zcSCpXuGCYtFbqYO0TwOVXxS2d+BXgSoDFZmRg8BC4Cuy54edjyIvhhcfCrDQA9nl+EPFTgHN54dRAK7mNA==",
       "type": "package",
-      "path": "runtime.unix.system.io.filesystem/4.3.0",
+      "path": "runtime.win.system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.system.io.filesystem.4.3.0.nupkg.sha512",
-        "runtime.unix.system.io.filesystem.nuspec",
-        "runtimes/unix/lib/netstandard1.3/System.IO.FileSystem.dll"
+        "runtime.win.system.io.filesystem.4.3.0.nupkg.sha512",
+        "runtime.win.system.io.filesystem.nuspec",
+        "runtimes/win/lib/net/_._",
+        "runtimes/win/lib/netcore50/System.IO.FileSystem.dll",
+        "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.dll",
+        "runtimes/win/lib/win8/_._",
+        "runtimes/win/lib/wp8/_._",
+        "runtimes/win/lib/wpa81/_._"
       ]
     },
-    "runtime.unix.System.Net.Primitives/4.3.0": {
-      "sha512": "AZcRXhH7Gamr+bckUfX3iHefPIrujJTt9XWQWo0elNiP1SNasX0KBWINZkDKY0GsOrsyJ7cB4MgIRTZzLlsTKg==",
+    "runtime.win.System.Net.Primitives/4.3.0": {
+      "sha512": "lkXXykakvXUU+Zq2j0pC6EO20lEhijjqMc01XXpp1CJN+DeCwl3nsj4t5Xbpz3kA7yQyTqw6d9SyIzsyLsV3zA==",
       "type": "package",
-      "path": "runtime.unix.system.net.primitives/4.3.0",
+      "path": "runtime.win.system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.system.net.primitives.4.3.0.nupkg.sha512",
-        "runtime.unix.system.net.primitives.nuspec",
-        "runtimes/unix/lib/netstandard1.3/System.Net.Primitives.dll"
+        "runtime.win.system.net.primitives.4.3.0.nupkg.sha512",
+        "runtime.win.system.net.primitives.nuspec",
+        "runtimes/win/lib/net/_._",
+        "runtimes/win/lib/netcore50/System.Net.Primitives.dll",
+        "runtimes/win/lib/netstandard1.3/System.Net.Primitives.dll"
       ]
     },
-    "runtime.unix.System.Net.Sockets/4.3.0": {
-      "sha512": "4NcLbqajFaD3PvhOdmbieeBlKY4d8/kBfgJ5g28n6k1jWEICabvLM62gvmUS/CvyfvcZxVanKPl+E9LhPzfXZw==",
+    "runtime.win.System.Net.Sockets/4.3.0": {
+      "sha512": "FK/2gX6MmuLIKNCGsV59Fe4IYrLrI5n9pQ1jh477wiivEM/NCXDT2dRetH5FSfY0bQ+VgTLcS3zcmjQ8my3nxQ==",
       "type": "package",
-      "path": "runtime.unix.system.net.sockets/4.3.0",
+      "path": "runtime.win.system.net.sockets/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.system.net.sockets.4.3.0.nupkg.sha512",
-        "runtime.unix.system.net.sockets.nuspec",
-        "runtimes/unix/lib/netstandard1.3/System.Net.Sockets.dll"
+        "runtime.win.system.net.sockets.4.3.0.nupkg.sha512",
+        "runtime.win.system.net.sockets.nuspec",
+        "runtimes/win/lib/net/_._",
+        "runtimes/win/lib/netcore50/System.Net.Sockets.dll",
+        "runtimes/win/lib/netstandard1.3/System.Net.Sockets.dll"
       ]
     },
-    "runtime.unix.System.Private.Uri/4.3.0": {
-      "sha512": "ooWzobr5RAq34r9uan1r/WPXJYG1XWy9KanrxNvEnBzbFdQbMG7Y3bVi4QxR7xZMNLOxLLTAyXvnSkfj5boZSg==",
+    "runtime.win.System.Runtime.Extensions/4.3.0": {
+      "sha512": "RkgHVhUPvzZxuUubiZe8yr/6CypRVXj0VBzaR8hsqQ8f+rUo7e4PWrHTLOCjd8fBMGWCrY//fi7Ku3qXD7oHRw==",
       "type": "package",
-      "path": "runtime.unix.system.private.uri/4.3.0",
+      "path": "runtime.win.system.runtime.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
-        "runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
-        "runtime.unix.system.private.uri.nuspec",
-        "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll"
-      ]
-    },
-    "runtime.unix.System.Runtime.Extensions/4.3.0": {
-      "sha512": "zQiTBVpiLftTQZW8GFsV0gjYikB1WMkEPIxF5O6RkUrSV/OgvRRTYgeFQha/0keBpuS0HYweraGRwhfhJ7dj7w==",
-      "type": "package",
-      "path": "runtime.unix.system.runtime.extensions/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "ref/netstandard/_._",
-        "runtime.unix.system.runtime.extensions.4.3.0.nupkg.sha512",
-        "runtime.unix.system.runtime.extensions.nuspec",
-        "runtimes/unix/lib/netstandard1.5/System.Runtime.Extensions.dll"
+        "runtime.win.system.runtime.extensions.4.3.0.nupkg.sha512",
+        "runtime.win.system.runtime.extensions.nuspec",
+        "runtimes/aot/lib/netcore50/System.Runtime.Extensions.dll",
+        "runtimes/win/lib/net/_._",
+        "runtimes/win/lib/netcore50/System.Runtime.Extensions.dll",
+        "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -13485,6 +13474,36 @@
         "system.threading.nuspec"
       ]
     },
+    "System.Threading.Overlapped/4.3.0": {
+      "sha512": "m3HQ2dPiX/DSTpf+yJt8B0c+SRvzfqAJKx+QDWi+VLhz8svLT23MVjEOHPF/KiSLeArKU/iHescrbLd3yVgyNg==",
+      "type": "package",
+      "path": "system.threading.overlapped/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net46/System.Threading.Overlapped.dll",
+        "ref/net46/System.Threading.Overlapped.dll",
+        "ref/netstandard1.3/System.Threading.Overlapped.dll",
+        "ref/netstandard1.3/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/de/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/es/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/fr/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/it/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/ja/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/ko/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/ru/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.Overlapped.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.Overlapped.xml",
+        "runtimes/unix/lib/netstandard1.3/System.Threading.Overlapped.dll",
+        "runtimes/win/lib/net46/System.Threading.Overlapped.dll",
+        "runtimes/win/lib/netcore50/System.Threading.Overlapped.dll",
+        "runtimes/win/lib/netstandard1.3/System.Threading.Overlapped.dll",
+        "system.threading.overlapped.4.3.0.nupkg.sha512",
+        "system.threading.overlapped.nuspec"
+      ]
+    },
     "System.Threading.Tasks/4.3.0": {
       "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "type": "package",
@@ -13588,46 +13607,6 @@
         "system.threading.tasks.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "System.Threading.ThreadPool/4.3.0": {
-      "sha512": "k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
-      "type": "package",
-      "path": "system.threading.threadpool/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Threading.ThreadPool.dll",
-        "lib/netcore50/_._",
-        "lib/netstandard1.3/System.Threading.ThreadPool.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Threading.ThreadPool.dll",
-        "ref/netstandard1.3/System.Threading.ThreadPool.dll",
-        "ref/netstandard1.3/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/de/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/es/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/fr/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/it/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/ja/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/ko/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/ru/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/zh-hans/System.Threading.ThreadPool.xml",
-        "ref/netstandard1.3/zh-hant/System.Threading.ThreadPool.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.threading.threadpool.4.3.0.nupkg.sha512",
-        "system.threading.threadpool.nuspec"
       ]
     },
     "System.Threading.Timer/4.3.0": {
@@ -14083,7 +14062,15 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
             "version": "[5.0.17, 5.0.17]"
           }
         ],
@@ -14099,7 +14086,7 @@
       }
     },
     "runtimes": {
-      "linux-x64": {
+      "win-x64": {
         "#import": []
       }
     }

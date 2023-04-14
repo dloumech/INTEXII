@@ -40,6 +40,7 @@ C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jq
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\web.config
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\aws-beanstalk-tools-defaults.json
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\INTEXII.dll
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\INTEXII.runtimeconfig.json
 C:\Users\irvin\Source\Repos\INTEXII\obj\Release\net5.0\PubTmp\Out\INTEXII.pdb

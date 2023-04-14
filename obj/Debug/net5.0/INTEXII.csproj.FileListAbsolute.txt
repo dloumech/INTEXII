@@ -183,4 +183,10 @@ C:\Users\irvin\source\repos\INTEXII\bin\Debug\net5.0\runtimes\win-arm64\lib\net5
 C:\Users\irvin\source\repos\INTEXII\bin\Debug\net5.0\runtimes\unix\lib\netstandard1.5\System.ServiceProcess.ServiceController.dll
 C:\Users\irvin\source\repos\INTEXII\bin\Debug\net5.0\runtimes\win\lib\netstandard1.5\System.ServiceProcess.ServiceController.dll
 C:\Users\irvin\Source\Repos\INTEXII\bin\Debug\net5.0\aws-beanstalk-tools-defaults.json
-C:\Users\irvin\Source\Repos\INTEXII\bin\Debug\net5.0\ref\INTEXII.dll
+C:\Users\irvin\Source\Repos\INTEXII\bin\Debug\net5.0\Owin.dll
+C:\Users\irvin\Source\Repos\INTEXII\obj\Debug\net5.0\staticwebassets\INTEXII.StaticWebAssets.Pack.cache
+C:\Users\irvin\Source\Repos\INTEXII\obj\Debug\net5.0\staticwebassets\msbuild.INTEXII.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\irvin\Source\Repos\INTEXII\obj\Debug\net5.0\staticwebassets\msbuild.build.INTEXII.props
+C:\Users\irvin\Source\Repos\INTEXII\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.INTEXII.props
+C:\Users\irvin\Source\Repos\INTEXII\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.INTEXII.props
+C:\Users\irvin\Source\Repos\INTEXII\obj\Debug\net5.0\refint\INTEXII.dll

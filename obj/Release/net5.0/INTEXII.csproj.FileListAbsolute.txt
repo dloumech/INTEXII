@@ -7,7 +7,6 @@ C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.deps.json
 C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.runtimeconfig.json
 C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.runtimeconfig.dev.json
 C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.dll
-C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\ref\INTEXII.dll
 C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.pdb
 C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.Views.dll
 C:\Users\irvin\source\repos\INTEXII\bin\Release\net5.0\INTEXII.Views.pdb
@@ -184,3 +183,4 @@ C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\ref\INTEXII.dll
 C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\INTEXII.pdb
 C:\Users\irvin\source\repos\INTEXII\obj\Release\net5.0\INTEXII.genruntimeconfig.cache
 C:\Users\irvin\Source\Repos\INTEXII\bin\Release\net5.0\aws-beanstalk-tools-defaults.json
+C:\Users\irvin\Source\Repos\INTEXII\bin\Release\net5.0\ref\INTEXII.dll

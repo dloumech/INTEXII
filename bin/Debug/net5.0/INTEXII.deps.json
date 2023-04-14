@@ -1131,6 +1131,9 @@
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.3": {},
       "Microsoft.Owin/4.2.2": {
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
         "runtime": {
           "lib/net45/Microsoft.Owin.dll": {
             "assemblyVersion": "4.2.2.0",
@@ -1444,6 +1447,17 @@
           "lib/net40/NuGet.Core.dll": {}
         }
       },
+      "Owin/1.0.0": {
+        "runtime": {
+          "lib/net40/Owin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1527,11 +1541,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Collections.Immutable/5.0.0": {
-        "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
-        }
-      },
+      "System.Collections.Immutable/5.0.0": {},
       "System.Collections.NonGeneric/4.3.0": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.3.0",
@@ -1558,11 +1568,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.ComponentModel.Annotations/5.0.0": {
-        "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        }
-      },
+      "System.ComponentModel.Annotations/5.0.0": {},
       "System.ComponentModel.Primitives/4.3.0": {
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -2065,11 +2071,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Metadata/5.0.0": {
-        "compile": {
-          "lib/netstandard2.0/System.Reflection.Metadata.dll": {}
-        }
-      },
+      "System.Reflection.Metadata/5.0.0": {},
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -4646,6 +4648,13 @@
       "sha512": "sha512-CacJcs4/AYDkhvA+eQNWcb4VSurY4w9+FciA851zsfsapiraDILRIFLTKWARV3F/xmQ+KLwaw2siPXKYUYv9Sw==",
       "path": "nuget.core/1.6.2",
       "hashPath": "nuget.core.1.6.2.nupkg.sha512"
+    },
+    "Owin/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
+      "path": "owin/1.0.0",
+      "hashPath": "owin.1.0.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
