@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj": {}
+    "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj": {
+    "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
+        "projectUniqueName": "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj",
         "projectName": "INTEXII",
-        "projectPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\INTEXII.csproj",
-        "packagesPath": "C:\\Users\\irvin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\irvin\\Source\\Repos\\INTEXII\\obj\\",
+        "projectPath": "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\INTEXII.csproj",
+        "packagesPath": "C:\\Users\\katie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\katie\\source\\repos\\INTEXII-hellno\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\irvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\katie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,25 +101,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -128,12 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

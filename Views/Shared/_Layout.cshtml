@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/OurClass.css"/>
 </head>
-<body>
+<body class="body-new">
     <header>
         <nav>
             <ul>
@@ -16,7 +16,10 @@
                     <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <a asp-area="" asp-controller="Home" asp-action="UAnalysis">Unsupervised</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="SAnalysis">Supervised</a>
                 </li>
                 <li>
                     <a asp-area="" asp-controller="Home" asp-action="BurialRecord"> Burial Records</a>
@@ -25,15 +28,15 @@
             <partial name="_LoginPartial" />
         </nav>
     </header>
-    <div class=""><!--took out container-->
+    <div class="body-new"><!--took out container-->
         <main role="main" class="pb-3 body-new">
             @RenderBody()
         </main>
     </div>
 
-    <footer class=" footer text-muted body-new head-foot"><!--took out border top-->
-        <div class="container">
-            &copy; 2023 - INTEXII - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class=" footer head-foot"><!--took out border top-->
+        <div>
+            <div class="flip">&copy; 2023 - INTEXII - <a class="foots" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a></div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

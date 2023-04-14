@@ -6,11 +6,16 @@
 @inject UserManager<IdentityUser> UserManager
 
 @model List<Burialmain>
-
+    <div>
+        <a asp-area="" asp-controller="Home" asp-action="RecordFilter"> Filter</a>
+    </div>
+    <div>
+        <a asp-area="" asp-controller="Home" asp-action="ClearFilters"> Reset Filter</a>
+    </div>
 <div class="container border">
     <div class="row border">
         <div class="col font-weight-bold text-center">
-            READ
+            Burial Records
         </div>
     </div>
     <div class="row border">
