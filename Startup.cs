@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace INTEXII
 {
@@ -43,6 +44,16 @@ namespace INTEXII
             services.AddDbContext<fagelgamous_databaseContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("MyConnection")));
 
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential 
+                // cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                // requires using Microsoft.AspNetCore.Http;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+
             //services.AddDefaultIdentity<ApplicationUser>()
             //    .AddRoles<ApplicationRole>()
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -64,6 +75,7 @@ namespace INTEXII
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
 
             app.UseRouting();
 
