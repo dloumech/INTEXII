@@ -152,7 +152,52 @@ a.navlink{
     text-align: center;
 }
 
+.frickyeah {
+    justify-content: center;
+    align-items: center;
+    
+}
 
+.chickennuggies {
+    color: rgb(76,17,3);
+    font-weight: bold;
+    padding-top: 30px;
+}
 
+.sunshine a:hover {
+    color: rgb(76,17,3);
+    text-decoration: none;
+    font-weight: bold;
+}
 
+.sunshine a {
+    color: rgb(76,17,3);
+}
 
+.border {
+    border-color: rgb(76,17,3)!important;
+}
+
+.fricknah{
+    font-size: 25px;
+    text-decoration:underline;
+    padding-left: 100px;
+}
+
+.shawty{
+    font-size: 30px;
+}
+
+.zach {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.syd{
+    padding-top: 30px;
+    text-align:center;
+}
