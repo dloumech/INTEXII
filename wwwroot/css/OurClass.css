@@ -1,4 +1,5 @@
-﻿nav {
+﻿
+nav {
     background-color: rgb(76,17,3);
     height: 60px;
     text-align:center;
@@ -26,10 +27,15 @@ a:hover{
     font-weight:bold;
 }
 
+a{
+    color:antiquewhite;
+}
+
 
 header nav ul li a{
     color: antiquewhite;
 }
+
 
 .logout{
     text-align: center;
@@ -134,6 +140,16 @@ a.navlink{
 
 .right{
     float: right;
+}
+
+.foots{
+    color:antiquewhite;
+    text-align: center;
+}
+
+.flip{
+    color:antiquewhite;
+    text-align: center;
 }
 
 

@@ -68,6 +68,26 @@ namespace INTEXII.Controllers
 
         }
 
+        //attempt to clear cache
+        public IActionResult ClearFilters()
+        {
+            return RedirectToAction("BurialRecord");
+        }
+
+        public IActionResult RecordFilter()
+        {
+            return View();
+        }
+
+        public IActionResult UAnalysis()
+        {
+            return View("UnsupervisedAnalysis");
+        }
+
+        public IActionResult SAnalysis()
+        {
+            return View("SupervisedAnalysis");
+        }
 
         [HttpGet]
         //[Authorize]
@@ -105,6 +125,29 @@ namespace INTEXII.Controllers
             {
                 return View(bm);
             }
+        }
+
+        public IActionResult FilterRecords(string sex, string burialdepth, string estimatestature, string ageatdeath, string headdirection, string squarenorthsouth, string northsouth, string squareeastwest, string eastwest, string area, string burialnumber, string haircolor)
+        {
+            var burials = _context.Burialmains;
+
+            // Your code to filter records based on the form values goes here
+            var filteredRecords = burials.Where(b =>
+           (string.IsNullOrEmpty(sex) || b.Sex == sex) &&
+           (string.IsNullOrEmpty(burialdepth) || b.Depth == burialdepth) &&
+           (string.IsNullOrEmpty(estimatestature) || b.Length == estimatestature) &&
+           (string.IsNullOrEmpty(ageatdeath) || b.Ageatdeath == ageatdeath) &&
+           (string.IsNullOrEmpty(headdirection) || b.Headdirection == headdirection) &&
+           (string.IsNullOrEmpty(squarenorthsouth) || b.Squarenorthsouth == squarenorthsouth) &&
+           (string.IsNullOrEmpty(northsouth) || b.Northsouth == northsouth) &&
+           (string.IsNullOrEmpty(squareeastwest) || b.Squareeastwest == squareeastwest) &&
+           (string.IsNullOrEmpty(eastwest) || b.Eastwest == eastwest) &&
+           (string.IsNullOrEmpty(area) || b.Area == area) &&
+           (string.IsNullOrEmpty(burialnumber) || b.Burialnumber == burialnumber) &&
+           (string.IsNullOrEmpty(haircolor) || b.Haircolor == haircolor)).ToList();
+
+            // Return the filtered records to the BurialRecord view
+            return View("BurialRecord", filteredRecords);
         }
 
         [HttpGet]
