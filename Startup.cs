@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.ML.OnnxRuntime;
 
 namespace INTEXII
 {
@@ -42,6 +43,9 @@ namespace INTEXII
 
             services.AddDbContext<fagelgamous_databaseContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("MyConnection")));
+
+            services.AddSingleton<InferenceSession>(
+               new InferenceSession("wwwroot/decisiontreemod.onnx"));
 
             //services.AddDefaultIdentity<ApplicationUser>()
             //    .AddRoles<ApplicationRole>()
